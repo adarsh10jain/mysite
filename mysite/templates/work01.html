@@ -1,0 +1,133 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="{% static '../../docs-ico/favicon.png' %}">
+
+    <title>work</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/main.css'%}" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="{% static 'js/hover.zoom.js' %}"></script>
+    <script src="{% static 'js/hover.zoom.conf.js' %}"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">ADARSH JAIN</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Home</a></li>
+            <li><a href="/work">Work</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/resume">Resume</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+	
+	
+	<!-- +++++ Projects Section +++++ -->
+	
+	<div class="container pt">
+		<div class="row mt">
+			<div class="col-lg-6 col-lg-offset-3 centered">
+				<h2>{{project.name}}</h2>
+        <hr>
+        <h4>Technology used</h4>
+        <p><b>{{project.tech_used}}</b></p>
+        <hr>
+				<p>{{project.desc}}</p>
+			</div>
+		</div>
+		<div class="row mt centered">	
+			<div class="">
+        <img class="img-responsive center_img" src="/media/{{project.thumbnail_img}}" alt="project_image">
+        <hr>
+        <h3>PROJECT IMAGES</h3>
+        <img style="border: 1px solid #000000;" class="img-responsive mt 12 center_img" src="/media/{{project.image}}" alt="project_image">
+        <img style="border: 1px solid #000000;" class="img-responsive mt 12 center_img" src="/media/{{project.image2}}" alt="project_image">
+        <img style="border: 1px solid #000000;" class="img-responsive mt 12 center_img" src="/media/{{project.image3}}" alt="project_image">
+        {% if project.image4%}
+        <img style="border: 1px solid #000000;" class="img-responsive mt 12 center_img" src="/media/{{project.image4}}" alt="project_image">
+        {%endif%}
+        {% if project.image5%}
+        <img style="border: 1px solid #000000;" class="img-responsive mt 12 center_img" src="/media/{{project.image5}}" alt="project_image">
+        {%endif%}
+
+			</div>
+		</div><!-- /row -->
+	</div><!-- /container -->
+  {% if project.exe%}
+  <div class="alert alert-success text-center" role="alert"><h3>--Download EXE--</h3>
+    <a href="{{project.exe.url}}" download><button type="button" class="btn btn-danger">Download</button></a>
+  </div>
+  {%endif%}
+	
+	<!-- +++++ Footer Section +++++ -->
+	
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<h4>My Bunker</h4>
+          <p>
+						Khurai,sagar,(Madhaya Pradesh)
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4>My Links</h4>
+					<p>
+						<a href="https://www.linkedin.com/in/adarsh-jain-3bb9a61ab">LinkedIn </a><br/>
+						<a href=" https://www.hackerrank.com/jain10adarsh">HeckerRank</a><br/>
+						<a href="https://github.com/adarsh10jain">GitHub</a><br/>
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+          <h4>About Adarsh</h4>
+					<p>This is my portfolio website to showcase my work and skills</p>
+					<p>E-mail : <a href="mailto:adarsh102jain@gmail.com.com">adarsh102jain@gmail.com.com</a></p>
+				</div><!-- /col-lg-4 -->
+			
+			</div>
+		
+		</div>
+	</div>
+	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  </body>
+</html>

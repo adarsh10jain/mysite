@@ -1,0 +1,140 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="{% static '../../docs-ico/favicon.png'%}">
+
+	<title>CONTACT ADARSH</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="{% static 'css/bootstrap.css'%}" rel="stylesheet">
+
+
+	<!-- Custom styles for this template -->
+	<link href="{% static 'css/main.css'%}" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="{% static 'js/hover.zoom.js'%}"></script>
+	<script src="{% static 'js/hover.zoom.conf.js'%}"></script>
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+	<!-- Static navbar -->
+	<div class="navbar navbar-inverse navbar-static-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">ADARSH JAIN</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/">HOME</a></li>
+					<li><a href="/work">Work</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/resume">Resume</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+
+
+	<!-- +++++ Contact Section +++++ -->
+
+	<div class="container pt">
+		<div class="row mt">
+			<div class="col-lg-6 col-lg-offset-3 centered">
+				<h3>CONTACT ME</h3>
+				<hr>
+				<p>contact adarsh jain </p>
+			</div>
+		</div>
+		<div class="row mt">
+			<div class="col-lg-8 col-lg-offset-2">
+				<form role="form" method="POST" action="/contact/">
+					{%csrf_token%}
+					<div class="form-group">
+						<input type="name" class="form-control" id="NameInputEmail1" name="name"
+							placeholder="Your Name">
+						<br>
+					</div>
+					<div class="form-group">
+						<input type="email" class="form-control" id="exampleInputEmail1" name="email"
+							placeholder="Enter email">
+						<br>
+					</div>
+					<div class="form-group">
+						<input type="phone" class="form-control" id="phoneNo" name="phone" placeholder="contact No.">
+						<br>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="subjectEmail1" name="subject" placeholder="Subject">
+						<br>
+					</div>
+					<textarea class="form-control" rows="6" placeholder="Enter your text here" name="desc"></textarea>
+					<br>
+					<button type="submit" class="btn btn-success">SUBMIT</button>
+				</form>
+			</div>
+		</div><!-- /row -->
+	</div><!-- /container -->
+
+
+	<!-- +++++ Footer Section +++++ -->
+
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<h4>My Bunker</h4>
+					<p>
+						Khurai,sagar,(Madhaya Pradesh)
+					</p>
+				</div><!-- /col-lg-4 -->
+
+				<div class="col-lg-4">
+					<h4>My Links</h4>
+					<p>
+						<a href="https://www.linkedin.com/in/adarsh-jain-3bb9a61ab">LinkedIn </a><br/>
+						<a href=" https://www.hackerrank.com/jain10adarsh">HeckerRank</a><br/>
+						<a href="https://github.com/adarsh10jain">GitHub</a><br/>
+					</p>
+				</div><!-- /col-lg-4 -->
+
+				<div class="col-lg-4">
+					<h4>About Adarsh</h4>
+					<p>This is my portfolio website to showcase my work and skills</p>
+					<p>E-mail : <a href="mailto:adarsh102jain@gmail.com.com">adarsh102jain@gmail.com.com</a></p>
+				</div><!-- /col-lg-4 -->
+
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="{% static 'js/bootstrap.min.js'%}"></script>
+</body>
+
+</html>
