@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'k9^yzbv1=@+bogypv59)8ir$y22d&gzo1jf5$yq!p*%2-shh=('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','dev-adarsh.herokuapp.com']
 
@@ -79,13 +79,13 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mysite1',
-        'USER': 'postgres',
-        'PASSWORD': 'Adarsh@99151234',
-        'HOST': 'localhost',
+        'NAME': 'ddht01bguftqbk',
+        'USER': 'psvbbnnnfbbwnk',
+        'PASSWORD': '34de886e9d6f912750cc4a92d9c91207fd30040330b25d74cd70d0cf8d35cf1f',
+        'HOST': 'ec2-52-70-135-246.compute-1.amazonaws.com',
+        'PORT': 5432
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
