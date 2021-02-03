@@ -52,6 +52,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
 ROOT_URLCONF = 'mysite.urls'
 
 TEMPLATES = [
